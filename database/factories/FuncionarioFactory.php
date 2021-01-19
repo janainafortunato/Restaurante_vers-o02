@@ -22,7 +22,12 @@ class FuncionarioFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'cpf' =>$this->faker->word,
+            'funcao'=>$this->faker->word,
+            'endereco'=>$this->faker->word,
+            'email'=>$this->faker->word,
+            'salario'=>$this->faker->randomDigit,
+            'rg'=>$this->faker->word
         ];
     }
 }
