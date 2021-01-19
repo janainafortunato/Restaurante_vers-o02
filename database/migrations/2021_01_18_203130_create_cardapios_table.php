@@ -15,6 +15,11 @@ class CreateCardapiosTable extends Migration
     {
         Schema::create('cardapios', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
+           // $table->foreign('user_id')->references('id')->on('users');
+            $table->string('tipo');
+            $table->string('descricao');
+            $table->decimal('preco', 8, 2);
             $table->timestamps();
         });
     }
