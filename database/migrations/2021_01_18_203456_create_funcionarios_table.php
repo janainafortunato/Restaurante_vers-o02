@@ -15,6 +15,13 @@ class CreateFuncionariosTable extends Migration
     {
         Schema::create('funcionarios', function (Blueprint $table) {
             $table->id();
+            $table->string('cpf');
+            $table->string('funcao');
+            $table->string('endereco');
+            $table->string('email');
+            $table->decimal('salario', 8,2);
+            $table->string('rg');
+            $table->integer('cardapio_id');
             $table->timestamps();
         });
     }

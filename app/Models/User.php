@@ -44,5 +44,6 @@ class User extends Authenticatable
    public function cardapios()
     {
         return $this->hasMany(Cardapio::class);
+        return $this->hasMany(Funcionario::class);
     }
 }
