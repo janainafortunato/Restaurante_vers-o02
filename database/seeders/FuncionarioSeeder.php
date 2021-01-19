@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Funcionario;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class FuncionarioSeeder extends Seeder

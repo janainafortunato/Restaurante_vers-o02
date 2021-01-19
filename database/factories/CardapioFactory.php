@@ -22,7 +22,9 @@ class CardapioFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'tipo' =>$this->faker->word,
+            'descricao'=>$this->faker->word,
+            'preco'=>$this->faker->randomDigit
         ];
     }
 }
