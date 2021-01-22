@@ -12,7 +12,7 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
-            <!-- Name -->
+            <!-- Name Address -->
             <div>
                 <x-label for="name" :value="__('Name')" />
 
@@ -24,6 +24,27 @@
                 <x-label for="email" :value="__('Email')" />
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+            </div>
+
+             <!-- Endereço Address -->
+             <div class="mt-4">
+                <x-label for="endereco" :value="__('Endereco')" />
+
+                <x-input id="endereco" class="block mt-1 w-full" type="text" name="endereco" :value="old('endereco')" />
+            </div>
+
+             <!-- CEP Address -->
+             <div class="mt-4">
+                <x-label for="cep" :value="__('Cep')" />
+
+                <x-input id="cep" class="block mt-1 w-full" type="text" name="cep" :value="old('cep')" required />
+            </div>
+
+             <!-- CPF -->
+             <div class="mt-4">
+                <x-label for="cpf" :value="__('Cpf')" />
+
+                <x-input id="cpf" class="block mt-1 w-full" type="text" name="cpf" :value="old('cpf')" required />
             </div>
 
             <!-- Password -->
