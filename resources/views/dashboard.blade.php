@@ -8,9 +8,36 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <h3>Cardapio do Café da Manhã</h3>
+                @foreach($user->cardapios as $cardapio)
                 <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
+                    {{$cardapio->tipo}}  {{$cardapio->descricao}}  {{$cardapio->preco}}
                 </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <h3>Cardapio do Almoço</h3>
+                @foreach($user->cardapios as $cardapio)
+                <div class="p-6 bg-white border-b border-gray-200">
+                    {{$cardapio->tipo}}  {{$cardapio->descricao}}  {{$cardapio->preco}}
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <h3>Cardapio do Jantar</h3>
+                @foreach($user->cardapios as $cardapio)
+                <div class="p-6 bg-white border-b border-gray-200">
+                    {{$cardapio->tipo}}  {{$cardapio->descricao}}  {{$cardapio->preco}}
+                </div>
+                @endforeach
             </div>
         </div>
     </div>
