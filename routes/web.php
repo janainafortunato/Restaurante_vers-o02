@@ -14,11 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CardapioController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/dashboard',[HomeController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
+
+Route::post('/cardapios/novo', [CardapioController::class, 'store'])->name('add-cardapio');
 
 require __DIR__.'/auth.php';
