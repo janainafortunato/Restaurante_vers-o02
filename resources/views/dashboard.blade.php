@@ -55,6 +55,7 @@
                     <div class="p-3">
                         <h1>Adicionar Cardapio</h1>
                         <form action="{{ route('add-cardapio') }}" method="POST">
+                        @csrf
                              <!-- Tipo Address -->
                             <div class="mt-4">
                                 <x-label for="tipo" :value="__('Tipo')" />

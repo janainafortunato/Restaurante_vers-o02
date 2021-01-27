@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Cardapio extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'tipo', 
+        'descricao',
+        'preco',
+        'user_id',
+    ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

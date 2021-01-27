@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cardapio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CardapioController extends Controller
 {
@@ -17,7 +18,14 @@ class CardapioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Cardapio::create([
+            'tipo'=> $request->tipo,
+            'descricao'=> $request->descricao,
+            'preco'=> $request->preco,
+            'user_id'=> Auth::user()->id,
+        ]);
+
+        return redirect('dashboard');
     }
 
     /**
