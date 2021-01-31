@@ -7,8 +7,14 @@
              </div>
                 <div class="grid grid-cols-2">
                     @foreach(Auth::user()->cardapios as $cardapio)
-                        <div class="p-3 m-0.5 border rounded-lg hover:bg-gray-200">
-                            <p>Tipo: {{$cardapio->tipo}}</p>  <p>Descrição: {{$cardapio->descricao}}</p>  <p>Preço R$: {{$cardapio->preco}}</p>
+                    <div class="m-0.5 border rounded-lg">
+                        <div class="mt-3 px-2 border-b">
+                        <p>Tipo: {{$cardapio->tipo}}</p>  <p>Descrição: {{$cardapio->descricao}}</p>  <p>Preço R$: {{$cardapio->preco}}</p>
+                        </div> 
+                            <div class="grid grid-cols-2 text-center">
+                                <a class="bg-indigo-200 rounded-bl-lg hover:bg-indigo-300" href="">Editar</a>
+                                <a class="bg-red-200 rounded-bl-lg hover:bg-red-300" href="{{ route('rm-cardapio', $cardapio->id)}}">Excluir</a>
+                            </div>  
                         </div>
                     @endforeach
                 </div>

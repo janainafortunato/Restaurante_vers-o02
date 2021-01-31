@@ -71,5 +71,8 @@ class CardapioController extends Controller
     public function destroy(Cardapio $cardapio)
     {
         //
+         $cardapio->delete();
+         
+         return redirect('dashboard');
     }
 }
