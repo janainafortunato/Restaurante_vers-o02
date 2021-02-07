@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Auth;
 class CardapioController extends Controller
 {
     
+    public function list() {
+        return auth()->user()->cardapios;
+    }
 
     /**
      * Store a newly created resource in storage.
