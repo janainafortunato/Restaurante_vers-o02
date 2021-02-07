@@ -25,6 +25,8 @@ Route::get('/dashboard',[HomeController::class, 'dashboard'])->middleware(['auth
 
 Route::post('/cardapio/novo', [CardapioController::class, 'store'])->name('add-cardapio');
 Route::model('cardapio', Cardapio::class);
-Route::get('/cardapio/remover/{cardapio}', [CardapioController::class, 'destroy'])->name('rm-cardapio');
+Route::get('/cardapio/remover/{cardapio}', [CardapioController::class, 'destroy'])
+->name('rm-cardapio')
+->middleware('auth');
 
 require __DIR__.'/auth.php';
