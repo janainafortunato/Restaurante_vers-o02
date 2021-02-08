@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CardapioController;
+use App\Http\Controllers\SPAController;
 use \App\Models\Cardapio;
 
 Route::get('/', function () {
@@ -28,5 +29,7 @@ Route::model('cardapio', Cardapio::class);
 Route::get('/cardapio/remover/{cardapio}', [CardapioController::class, 'destroy'])
 ->name('rm-cardapio')
 ->middleware('auth');
+
+Route::get('/spa', [SPAController::class, 'home']);
 
 require __DIR__.'/auth.php';
